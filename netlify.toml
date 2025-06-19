@@ -1,8 +1,14 @@
 [build]
-  # This tells Netlify where your serverless functions are located.
+  # This tells Netlify where your serverless functions are.
   functions = "api/"
 
-# This rule makes your single-page application work correctly.
+# This rule tells Netlify how to handle API calls.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# This rule handles all other requests for your single-page app.
 [[redirects]]
   from = "/*"
   to = "/index.html"
