@@ -198,7 +198,3 @@ function toggleProductSelection(event, name) {
 }
 function escapeQuotes(str) {
     return str ? str.replace(/'/g, "\\'").replace(/"/g, '\\"') : '';
-}
-
-// THIS IS OUR TEST ALERT.
-alert("TEST 2: The JavaScript file has loaded successfully!");
