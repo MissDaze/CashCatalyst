@@ -1,104 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Catalyst - AI Business Launcher</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cash Catalyst</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header class="header">
-<script>alert("TEST 1: The HTML page is loading.");</script>        <div class="container">
-            <h1><i class="fas fa-rocket"></i> Cash Catalyst</h1>
-            <p>AI-Powered Tool for Finding & Launching Your Next Big Idea</p>
-        </div>
-    </header>
+  <div class="container">
+    <h1>Cash Catalyst 🚀</h1>
+    <p>AI-Powered Business Idea Launcher</p>
 
-    <main class="main-content">
-        <div class="container">
-            <section class="step-section active" id="step-1">
-                <div class="step-header">
-                    <span class="step-number">1</span>
-                    <h2>What's Your Niche?</h2>
-                </div>
-                <div class="input-group">
-                    <input type="text" id="niche-input" placeholder="e.g., sustainable fashion, home coffee brewing, pet tech" class="main-input">
-                    <button onclick="goToStep2()" class="btn-primary">
-                        <i class="fas fa-arrow-right"></i> Find Opportunities
-                    </button>
-                </div>
-            </section>
+    <input type="text" id="nicheInput" placeholder="Enter your niche...">
+    <button id="launchBtn">Find Opportunities</button>
 
-            <section class="step-section" id="step-2">
-                <div class="step-header">
-                    <span class="step-number">2</span>
-                    <h2>Choose Your Business Model</h2>
-                </div>
-                <div class="business-options">
-                    <div class="business-card" onclick="selectBusinessType('affiliate', event)">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Affiliate Marketing</h3>
-                        <p>Find products to promote for a commission.</p>
-                    </div>
-                    <div class="business-card" onclick="selectBusinessType('dropshipping', event)">
-                        <i class="fas fa-shipping-fast"></i>
-                        <h3>Dropshipping</h3>
-                        <p>Find products to sell without holding inventory.</p>
-                    </div>
-                </div>
-            </section>
+    <div id="results" class="output"></div>
+  </div>
 
-            <section class="step-section" id="step-3">
-                <div class="step-header">
-                    <span class="step-number">3</span>
-                    <h2 id="results-title">Found Opportunities</h2>
-                </div>
-                <div class="loading" id="loading">
-                    <i class="fas fa-spinner fa-spin"></i>
-                    <p>Performing deep search for real products...</p>
-                </div>
-                <div class="results-container" id="results-container"></div>
-                <div class="selection-info">
-                    <p><i class="fas fa-info-circle"></i> Select up to 5 opportunities to analyze.</p>
-                    <button onclick="proceedToKeywords()" class="btn-primary" id="proceed-btn" disabled>
-                        Analyze Keywords <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </section>
+  <script src="script.js"></script>
 
-            <section class="step-section" id="step-4">
-                <div class="step-header">
-                    <span class="step-number">4</span>
-                    <h2>Keyword & Competition Analysis</h2>
-                </div>
-                <div class="loading" id="loading-keywords">
-                    <i class="fas fa-spinner fa-spin"></i>
-                    <p>Performing deep market analysis...</p>
-                </div>
-                <div class="keyword-analysis" id="keyword-analysis"></div>
-                 <div class="analysis-options">
-                    <button onclick="showMarketingStrategy()" class="btn-success">
-                        <i class="fas fa-lightbulb"></i> Generate Marketing Package
-                    </button>
-                </div>
-            </section>
 
-            <section class="step-section" id="step-5">
-                <div class="step-header">
-                    <span class="step-number">5</span>
-                    <h2>Your Complete Marketing Package</h2>
-                </div>
-                <div class="loading" id="loading-strategy">
-                    <i class="fas fa-spinner fa-spin"></i>
-                    <p>Your AI marketing team is building your assets...</p>
-                </div>
-                <div class="strategy-container" id="strategy-container">
-                    </div>
-            </section>
-        </div>
-    </main>
-    <script src="script.js"></script>
 </body>
 </html>
