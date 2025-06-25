@@ -11,14 +11,44 @@
     <h1>Cash Catalyst 🚀</h1>
     <p>AI-Powered Business Idea Launcher</p>
 
-    <input type="text" id="nicheInput" placeholder="Enter your niche...">
-    <button id="launchBtn">Find Opportunities</button>
+    <!-- Step 1 -->
+    <div class="step" id="step-1">
+      <input type="text" id="nicheInput" placeholder="Enter your niche..." />
+      <button onclick="goToStep2()">Start Research</button>
+    </div>
 
-    <div id="results" class="output"></div>
+    <!-- Step 2 -->
+    <div class="step" style="display: none;">
+      <p>Select a business type:</p>
+      <div class="business-options">
+        <div class="business-card" onclick="selectBusinessType('service', event)">Service</div>
+        <div class="business-card" onclick="selectBusinessType('product', event)">Product</div>
+        <div class="business-card" onclick="selectBusinessType('info', event)">Info Product</div>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step" style="display: none;">
+      <h3>Opportunities:</h3>
+      <div id="opportunity-list" class="output"></div>
+      <button onclick="proceedToKeywords()">Next: Get Keywords</button>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step" style="display: none;">
+      <h3>Recommended Keywords:</h3>
+      <div id="keywords-output" class="output"></div>
+      <button onclick="showMarketingStrategy()">Next: Generate Content</button>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="step" style="display: none;">
+      <h3>Marketing Materials:</h3>
+      <div id="marketing-output" class="output"></div>
+      <button onclick="alert('Calendar builder coming soon!')">Finish</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
-
-
 </body>
 </html>
