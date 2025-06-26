@@ -2,9 +2,8 @@
   "name": "cash-catalyst",
   "version": "1.0.0",
   "description": "AI-powered tool for finding and launching business ideas",
-  "main": "index.js",
   "scripts": {
-    "start": "vercel dev"
+    "dev": "netlify dev"
   },
   "dependencies": {
     "@google/generative-ai": "^0.1.0",
